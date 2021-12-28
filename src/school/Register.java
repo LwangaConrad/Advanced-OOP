@@ -165,7 +165,7 @@ public class Register extends JFrame implements ActionListener{
                     st.setString(6, cl);
                     st.setString(7, un);
                     st.setString(8, ps);
-                    pst.setString(1, (fn + " " + ln));
+                    pst.setString(1, (ln + " " + fn));
                     pst.setString(2, reg);
                     pst.setString(3, cl);
                     st.execute();

@@ -5,7 +5,6 @@ import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -18,7 +17,6 @@ import javax.swing.JButton;
 public class DashP extends JFrame implements ActionListener{
 
 	private JPanel contentPane;
-	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -80,19 +78,12 @@ public class DashP extends JFrame implements ActionListener{
 		btnNewButton_1.setBounds(151, 167, 131, 23);
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				Timetable tmtbl = new Timetable();
+				Timetable tmtbl = new Timetable(uname);
 				tmtbl.setVisible(true);
 				DashP.super.dispose();
 			}
 		});
 		contentPane.add(btnNewButton_1);
-		
-		textField = new JTextField();
-		textField.setEditable(false);
-		textField.setText(s);
-		textField.setBounds(165, 243, 96, 20);
-		contentPane.add(textField);
-		textField.setColumns(10);
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
